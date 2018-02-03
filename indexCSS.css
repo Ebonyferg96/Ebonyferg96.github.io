@@ -1,10 +1,13 @@
 body{ 
 	margin: 0px; 
-	background-color: black; 
+	background-color: black;
 	color: white; 
 	font-family: monospace; 
+	background-image: url("bacon.gif");
+	background-size: 150px;
 } 
 p{
 	border-top: 5px solid red;
 	border-bottom: 5px solid red;
+	text-indent: 33%
 }
