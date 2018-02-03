@@ -3,6 +3,7 @@ body{
 	background-color: black; 
 	color: white; 
 	font-family: monospace; 
+	background-image: url("bacon.gif");
 } 
 p{
 	border-top: 5px solid red;
