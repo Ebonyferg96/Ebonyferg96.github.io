@@ -3,11 +3,17 @@ body{
 	background-color: black;
 	color: white; 
 	font-family: monospace; 
-	background-image: url("bacon.gif");
-	background-size: 150px;
+   	background-image:url(groovy.gif);
+    	background-repeat:space;
+	background-size: 250px 200px;
+	
 } 
 p{
 	border-top: 5px solid red;
 	border-bottom: 5px solid red;
-	text-indent: 33%
+	padding-left:30%;
+}
+h1{
+	text-align: center;
+	color: red;
 }
