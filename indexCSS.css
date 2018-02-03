@@ -1,0 +1,10 @@
+body{ 
+	margin: 0px; 
+	background-color: black; 
+	color: white; 
+	font-family: monospace; 
+} 
+p{
+	border-top: 5px solid red;
+	border-bottom: 5px solid red;
+}
