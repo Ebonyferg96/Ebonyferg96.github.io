@@ -4,8 +4,7 @@ body{
 	color: white; 
 	font-family: monospace; 
    	background-image:url(Groovy.gif);
-    	background-repeat:space;
-	background-size: 250px 200px;
+    	font-size: 20px;
 	
 } 
 p{
