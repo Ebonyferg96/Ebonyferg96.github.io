@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    	<title>My Interests</title>
+    	<meta charset="UTF-8">
+	<script src="Interest.js"></script>
+</head>
+
+<body id="list">
+    <h3>
+        My Interests
+    </h3>
+    <ol type="I">
+       <li>
+            Nature
+            <ol type="A">
+                <li>
+                    Plants
+                        <ol>
+                            <li>
+                                Aloe Vera Plants
+                            </li>
+                            <li>
+                                Spider Plants
+                            </li>
+                            <li>
+                                Orchids
+                            </li>
+                            <li>
+                                Hibiscus
+                            </li>
+                        </ol>
+                </li>
+                <li>
+                    Animals
+                </li>
+            </ol>
+       </li>
+       <li>
+            Sports
+            <ol type="A">
+                <li>
+                    Football
+                </li>
+                <li>
+                    Volleyball
+                </li>
+                <li>
+                    Basketball
+                </li>
+                <li>
+                    Gymnastics
+                </li>
+                <li>
+                    Swimming
+                </li>
+            </ol>
+       </li>
+       <li>
+            Music
+            <ol type="A">
+                <li>
+                    Rhythm and Blues
+                    <ol>
+                        <li>
+                            Beyonce
+                        </li>
+                        <li>
+                            Luther Vandross
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Hip-Hop
+                    <ol>
+                        <li>
+                            Jay-Z
+                        </li>
+                        <li>
+                            Lil Wayne
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Soul
+                    <ol>
+                        <li>
+                            Al Green
+                        </li>
+                        <li>
+                            Aretha Franklin
+                        </li>
+                        <li>
+                            Gladys Knight
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+       </li>
+    </ol>
+
+<form>
+        <fieldset>
+            <legend>Controls</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="colorChoices" checked="checked" onchange="changeColor('black');"> Black </label><br>
+                            <label><input type="radio" name="colorChoices" onchange="changeColor('white');"> White </label><br>
+                            <label><input type="radio" name="colorChoices" onchange="changeColor('blue');"> Blue </label><br>
+                        </td>
+                        
+                        <td>Font: <select id="fontChoices" onchange="changeFont()">
+                                    <option id = "arial" value = "arial">Arial</option>
+                                    <option id = "times" value = "times new roman">Times New Roman</option>
+                                    <option id = "courier" value = "Courier New">Courier New</option>
+                                </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+</form> 
+
+<button onclick="myFunction()">Fun Fact</button> 
+
+
+<button onclick="window.location.href='index.html'">Back to Index</button>
+
+
+</body>
+</html>
