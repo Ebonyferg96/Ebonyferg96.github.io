@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+<head>
+    <title>JS Practice</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="JS_Practice_CSS.css" />
+    <script>
+    var songs = [
+        {
+            "Name": "Until The End Of Time",
+            "Artist": "Justin Timberlake",
+            "Album": "FutureSex/LoveSounds",
+            "Features": "Beyonce",
+            "YearReleased": "2006",
+        },
+        {
+            "Name": "Love on Top",
+            "Artist": "Beyonce",
+            "Album": "4",
+            "Features": "N/A",
+            "YearReleased": "2011",
+        },
+        {
+            "Name": "U Remind Me",
+            "Artist": "Usher",
+            "Album": "8701",
+            "Features": "N/A",
+            "YearReleased": "2001",
+        },
+        {
+            "Name": "Ordinary People",
+            "Artist": "John Legend",
+            "Album": "Get Lifted",
+            "Features": "N/A",
+            "YearReleased": "2004",
+        },
+        {
+            "Name": "Love",
+            "Artist": "Musiq Soulchild",
+            "Album": "Aijuswanaseing",
+            "Features": "N/A",
+            "YearReleased": "2000",
+        },
+    ];
+</script>
+</head>
+<body>
+    <h1>
+        Valentine's Day Playlist
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Features</th>
+                <th>Year Released</th>
+            </tr>
+            <tbody id="myMusic">
+                
+            </tbody>
+        </thead>
+    </table>
+    <script>
+     
+     
+     
+     	var text = "";
+			for (var x in songs) {
+				if (songs.hasOwnProperty(x)) {
+					var obj = songs[x];
+
+					text += "<tr><td>" + obj.Name + "</td><td>" + obj.Artist + "</td><td>" + obj.Album + "</td><td>" + obj.Features + "</td><td>" + obj.YearReleased + "</td></tr>";
+				}
+			}
+        document.getElementById("myMusic").innerHTML = text;
+    </script>
+    
+</body>
+</html>
