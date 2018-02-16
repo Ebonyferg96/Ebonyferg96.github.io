@@ -1,18 +1,33 @@
 body{ 
-	margin: 0px; 
+	margin: auto; 
 	background-color: black;
 	color: white; 
 	font-family: monospace; 
-   	background-image:url(Groovy.gif);
-    	font-size: 20px;
+   	background-image:url(giphy.gif);
+	background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 18px;
+	width: 33vw;
 	
 } 
 p{
-	border-top: 5px solid red;
-	border-bottom: 5px solid red;
-	padding-left:30%;
+	border-top: 5px dotted white;
+	border-bottom: 5px dotted white;
+	background-color: black;
+	text-align: center;
 }
 h1{
 	text-align: center;
 	color: white;
+}
+h2{
+	text-align: center;
+	color: white;
+}
+td{
+	padding: 15px;
+	text-align: left;
+}
+form{
+   text-align: center;
 }

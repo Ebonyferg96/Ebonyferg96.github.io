@@ -65,18 +65,19 @@
     </table>
     <script>
      
-     
-     
      	var text = "";
 			for (var x in songs) {
 				if (songs.hasOwnProperty(x)) {
 					var obj = songs[x];
-
-					text += "<tr><td>" + obj.Name + "</td><td>" + obj.Artist + "</td><td>" + obj.Album + "</td><td>" + obj.Features + "</td><td>" + obj.YearReleased + "</td></tr>";
+					text += "<tr><td>" + obj.Name + "</td><td>" + obj.Artist + "</td><td>" +
+                    obj.Album + "</td><td>" + obj.Features + "</td><td>" + obj.YearReleased + "</td></tr>";
 				}
 			}
         document.getElementById("myMusic").innerHTML = text;
     </script>
-    
+    </br>
+    <form>
+        <input type="button" onclick="window.location.href = 'index.html';" value="Back to Index" id="button" />
+    </form>
 </body>
 </html>
