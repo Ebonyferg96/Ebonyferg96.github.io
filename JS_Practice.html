@@ -13,6 +13,7 @@
             "Album": "FutureSex/LoveSounds",
             "Features": "Beyonce",
             "YearReleased": "2006",
+            "Seconds": 322,
         },
         {
             "Name": "Love on Top",
@@ -20,6 +21,7 @@
             "Album": "4",
             "Features": "N/A",
             "YearReleased": "2011",
+            "Seconds": 267,
         },
         {
             "Name": "U Remind Me",
@@ -27,6 +29,7 @@
             "Album": "8701",
             "Features": "N/A",
             "YearReleased": "2001",
+            "Seconds": 267,
         },
         {
             "Name": "Ordinary People",
@@ -34,6 +37,7 @@
             "Album": "Get Lifted",
             "Features": "N/A",
             "YearReleased": "2004",
+            "Seconds": 281,
         },
         {
             "Name": "Love",
@@ -41,6 +45,7 @@
             "Album": "Aijuswanaseing",
             "Features": "N/A",
             "YearReleased": "2000",
+            "Seconds": 297,
         },
     ];
 </script>
@@ -57,23 +62,82 @@
                 <th>Album</th>
                 <th>Features</th>
                 <th>Year Released</th>
+                <th>Length</th>
             </tr>
-            <tbody id="myMusic">
-                
-            </tbody>
         </thead>
+        <tbody id="myMusic"></tbody>
+        <tfoot>
+                <tr>
+                    <th colspan = 6>Statistics </th>
+                </tr>
+                <tr>
+                    <th colspan = 2>Total Artists</th>
+                    <th colspan = 2>Total Songs</th>
+                    <th colspan = 2>Playlist Length</th>
+                </tr>
+                <tr id= "statistics"></tr>
+        </tfoot>
+        
+        
     </table>
     <script>
-     
+        var sum;
+        var nameArray = [];
+        var artistArray = [];
+        var timeArray = [];
+        var time; 
      	var text = "";
 			for (var x in songs) {
 				if (songs.hasOwnProperty(x)) {
-					var obj = songs[x];
+                    var obj = songs[x];
+                    secondsToTime(obj.Seconds);
 					text += "<tr><td>" + obj.Name + "</td><td>" + obj.Artist + "</td><td>" +
-                    obj.Album + "</td><td>" + obj.Features + "</td><td>" + obj.YearReleased + "</td></tr>";
+                    obj.Album + "</td><td>" + obj.Features + "</td><td>" + obj.YearReleased + "</td><td>" + time + "</td></tr>";
+                    nameArray.push(obj.Name);
+                    artistArray.push(obj.Artist);
+                    timeArray.push(obj.Seconds);
+                    sum = timeArray.reduce((x, y) => x + y);
 				}
 			}
-        document.getElementById("myMusic").innerHTML = text;
+            
+            document.getElementById("myMusic").innerHTML = text;
+            var newtext = "";
+            newtext += "<tr><td colspan = 2>" + count(artistArray) + "</td><td colspan = 2>" + count(nameArray) +
+            "</td><td colspan = 2>" + secondsToTime(sum) +  "</td></tr>";
+            
+            document.getElementById("statistics").innerHTML = newtext;
+            
+            function count(arr){
+                var count = 0;
+                var unique_array = [];
+                for(var i = 0; i < arr.length; i++){
+                    if(unique_array.indexOf(arr[i]) == -1){
+                        unique_array.push(arr[i]);
+                        count++;
+                    }
+                }
+                return count;
+            }
+            
+            
+            function secondsToTime(num) {
+                var hours   = Math.floor(num / 3600);
+                var minutes = Math.floor((num - (hours * 3600)) / 60);
+                var seconds = num - (hours * 3600) - (minutes * 60);
+                if (hours   < 10) {
+                    hours   = "0" + hours;
+                }
+                if (minutes < 10) {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                time = hours + ":" + minutes + ":" + seconds;
+                return time;
+            }
+        
+
     </script>
     </br>
     <form>
